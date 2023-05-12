@@ -2,7 +2,7 @@
 
     function testlist($letter, $list) {
         foreach($list as $element) {
-            // Return false if an element of the list is equal to $num
+            // Return false if an element of the list is equal to $letter
             if ($letter == $element){
                 return true;
             }

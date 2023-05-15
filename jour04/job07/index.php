@@ -2,10 +2,10 @@
     function maison($hauteur, $largeur) {
         
         for($i = 0; $i <= $hauteur; $i++){         
-            for($j = 1; $j <= $largeur; $j++){
+            for($j = 0; $j <= $largeur; $j++){
 
                 if($j < $largeur && $i < $hauteur/2){
-
+                    // Toit de la maison
                     switch (true) {
                         case ($j < ($largeur-$i)):
                             echo "&nbsp";
@@ -13,14 +13,12 @@
                         case ($j == $largeur-$i):
                             echo "/";
                             break;
-                        case ($j == $largeur):
-                            echo "\\";
-                            break;
                         default:
                             echo "_";
                     }
-                } else {
-                        if( ($j == 1 || $j == $largeur) && ($i >= $hauteur/2)) {
+                }   // Base de la maison
+                else {
+                        if( ($j == 0 || $j == $largeur) && ($i >= $hauteur/2)) {
                         echo "&nbsp|";
                     }
                     elseif($i < ($hauteur/2) || $i == $hauteur){
